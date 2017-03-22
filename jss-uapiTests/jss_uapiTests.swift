@@ -21,15 +21,20 @@ class jss_uapiTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testAuthenticate() {
+        let url = URL(string: "https://localhost:8444")!
+        let credentials = URLCredential(user: "admin", password: "pa$$W0rd", persistence: URLCredential.Persistence.none)
+        let uapi = UAPI(url: url, credential: credentials)
+        
+        let expect = expectation(description: "URLSession result")
+        
+        uapi.authenticate() {
+            (result) in
+            expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5) { error in
+            
         }
     }
     

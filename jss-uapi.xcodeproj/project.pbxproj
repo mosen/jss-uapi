@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		848D60CD1E82900A008FB4A0 /* jss-uapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848D60C31E829009008FB4A0 /* jss-uapi.framework */; };
+		848D60CD1E82900A008FB4A0 /* jss_uapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848D60C31E829009008FB4A0 /* jss_uapi.framework */; };
 		848D60D21E82900A008FB4A0 /* jss_uapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D60D11E82900A008FB4A0 /* jss_uapiTests.swift */; };
 		848D60D41E82900A008FB4A0 /* jss-uapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 848D60C61E829009008FB4A0 /* jss-uapi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		848D60DF1E829075008FB4A0 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D60DE1E829075008FB4A0 /* Token.swift */; };
+		848D60E11E8290B2008FB4A0 /* UAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D60E01E8290B2008FB4A0 /* UAPI.swift */; };
+		848D60E31E829879008FB4A0 /* URLCredential+HTTPBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D60E21E829879008FB4A0 /* URLCredential+HTTPBasic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		848D60C31E829009008FB4A0 /* jss-uapi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "jss-uapi.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		848D60C31E829009008FB4A0 /* jss_uapi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = jss_uapi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D60C61E829009008FB4A0 /* jss-uapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jss-uapi.h"; sourceTree = "<group>"; };
 		848D60C71E829009008FB4A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848D60CC1E82900A008FB4A0 /* jss-uapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jss-uapiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D60D11E82900A008FB4A0 /* jss_uapiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jss_uapiTests.swift; sourceTree = "<group>"; };
 		848D60D31E82900A008FB4A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848D60DE1E829075008FB4A0 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		848D60E01E8290B2008FB4A0 /* UAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UAPI.swift; sourceTree = "<group>"; };
+		848D60E21E829879008FB4A0 /* URLCredential+HTTPBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLCredential+HTTPBasic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848D60CD1E82900A008FB4A0 /* jss-uapi.framework in Frameworks */,
+				848D60CD1E82900A008FB4A0 /* jss_uapi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +68,7 @@
 		848D60C41E829009008FB4A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				848D60C31E829009008FB4A0 /* jss-uapi.framework */,
+				848D60C31E829009008FB4A0 /* jss_uapi.framework */,
 				848D60CC1E82900A008FB4A0 /* jss-uapiTests.xctest */,
 			);
 			name = Products;
@@ -73,6 +79,9 @@
 			children = (
 				848D60C61E829009008FB4A0 /* jss-uapi.h */,
 				848D60C71E829009008FB4A0 /* Info.plist */,
+				848D60DE1E829075008FB4A0 /* Token.swift */,
+				848D60E01E8290B2008FB4A0 /* UAPI.swift */,
+				848D60E21E829879008FB4A0 /* URLCredential+HTTPBasic.swift */,
 			);
 			path = "jss-uapi";
 			sourceTree = "<group>";
@@ -115,7 +124,7 @@
 			);
 			name = "jss-uapi";
 			productName = "jss-uapi";
-			productReference = 848D60C31E829009008FB4A0 /* jss-uapi.framework */;
+			productReference = 848D60C31E829009008FB4A0 /* jss_uapi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		848D60CB1E82900A008FB4A0 /* jss-uapiTests */ = {
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					848D60C21E829009008FB4A0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					848D60CB1E82900A008FB4A0 = {
@@ -196,6 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848D60E11E8290B2008FB4A0 /* UAPI.swift in Sources */,
+				848D60DF1E829075008FB4A0 /* Token.swift in Sources */,
+				848D60E31E829879008FB4A0 /* URLCredential+HTTPBasic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -305,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -317,6 +330,7 @@
 		848D60D81E82900A008FB4A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -328,8 +342,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.mosen.jss-uapi";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = jss_uapi;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -337,6 +352,7 @@
 		848D60D91E82900A008FB4A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -348,7 +364,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.mosen.jss-uapi";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = jss_uapi;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -357,6 +373,7 @@
 		848D60DB1E82900A008FB4A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "jss-uapiTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -369,6 +386,7 @@
 		848D60DC1E82900A008FB4A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "jss-uapiTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -397,6 +415,7 @@
 				848D60D91E82900A008FB4A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		848D60DA1E82900A008FB4A0 /* Build configuration list for PBXNativeTarget "jss-uapiTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +424,7 @@
 				848D60DC1E82900A008FB4A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
